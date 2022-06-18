@@ -17,6 +17,10 @@ $data = array();
 while ($row = pg_fetch_array($qqq)) {
     array_push($data, $row['_id']);
 }
+for ($i=0; $i <count($data) ; $i++) { 
+    echo $data[$i];
+    echo '<br/>';
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     #chek if file was uploaded without errors

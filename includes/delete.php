@@ -31,7 +31,7 @@ for ($i=0; $i < $countAllNames; $i++) {
         echo "can not delete file!";
         exit();
     }
-    pg_query("TRUNCATE TABLE images");
+    pg_query("DELETE FROM images WHERE _file = '$allFileNames[$i]' ");
 }
 echo "You have deleted ".$countAllNames." images";
 header("Refresh: 3; URL=../user_profile.php");

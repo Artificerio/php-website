@@ -6,7 +6,7 @@
 require("includes/connect.php");
 session_start();
 $user_id = $_SESSION['id'];
-$check = pg_query("SELECT EXISTS(SELECT 1 FROM images WHERE user_id='$user_id')");
+#$check = pg_query("SELECT EXISTS(SELECT 1 FROM images WHERE user_id='$user_id')");
 
 ?>
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ $check = pg_query("SELECT EXISTS(SELECT 1 FROM images WHERE user_id='$user_id')"
   <input type="submit" value="Upload Image" name="submit">
 </form>
 <?php
-if ($check) {
+if (1) {
     $image_details = pg_query("SELECT * FROM images WHERE user_id = '$user_id'");
     while ($row = pg_fetch_array($image_details)) {
         echo "<div class='image_content'>";
