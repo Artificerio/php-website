@@ -1,0 +1,16 @@
+#login_page {
+    text-align: center;
+    background-color: bisque;
+}
+#user_profile_page {
+    text-align: center;
+}
+.field {
+    margin-bottom: 15px;
+}
+.login_error{
+    color: red;
+}
+.login_div{
+    color: black;
+}
