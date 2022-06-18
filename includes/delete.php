@@ -33,6 +33,6 @@ for ($i=0; $i < $countAllNames; $i++) {
     }
     pg_query("TRUNCATE TABLE images");
 }
-echo "You have deleted ".$countAllNames. "images";
+echo "You have deleted ".$countAllNames." images";
 header("Refresh: 3; URL=../user_profile.php");
 ?>

@@ -1,4 +1,8 @@
 <?php
+#TODO: 1. create sign_up page
+      #2. create database_scheme 
+      #3. implement scheme in website
+
 require("includes/connect.php");
 session_start();
 $user_id = $_SESSION['id'];
