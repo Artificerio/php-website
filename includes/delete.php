@@ -31,7 +31,7 @@ for ($i=0; $i < $countAllNames; $i++) {
         echo "can not delete file!";
         exit();
     }
-    pg_query("DELETE FROM images WHERE _file = '$allFileNames[$i]' ");
+    pg_query("DELETE FROM images WHERE _file = '$allFileNames[$i]' AND user_id = '$user_id'; ");
 }
 echo "You have deleted ".$countAllNames." images";
 header("Refresh: 3; URL=../user_profile.php");
