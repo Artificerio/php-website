@@ -33,6 +33,7 @@ session_start();
             $_SESSION['id'] = $row['id'];
             $_SESSION['email'] = $row['email'];
             $_SESSION['psswd'] = $row['psswd'];
+
         } elseif (empty($u_email) || empty($u_pass)) {
             echo '<h1 class="login_error">Please, fill in the gaps!</h1>';
         } else {

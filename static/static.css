@@ -2,9 +2,6 @@
     text-align: center;
     background-color: bisque;
 }
-#user_profile_page {
-    text-align: center;
-}
 .field {
     margin-bottom: 15px;
 }
@@ -13,4 +10,19 @@
 }
 .login_div{
     color: black;
+}
+.logout_href{
+    color: coral;
+}
+.user_profile_page, body {
+    text-align: left;
+}
+.user_welocome {
+    text-align: center;
+}
+.submit_data {
+    text-align: center;
+}
+.delete_data {
+    text-align: center;
 }

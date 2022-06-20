@@ -10,16 +10,12 @@ $filename = $_FILES["file_name"]["name"];
 $filetype = $_FILES["file_name"]["type"];
 $filesize = $_FILES["file_name"]["size"];
 $user_id = $_SESSION['id'];
+$file_desc = $_POST['file_desc'];
 $target_dir = "../img_". $user_id . "/";
-
 $qqq = pg_query("SELECT * FROM images WHERE user_id = '$user_id';");
 $data = array();
 while ($row = pg_fetch_array($qqq)) {
     array_push($data, $row['_id']);
-}
-for ($i=0; $i <count($data) ; $i++) { 
-    echo $data[$i];
-    echo '<br/>';
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -42,11 +38,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </script>';
         } else {
             if (move_uploaded_file($_FILES['file_name']['tmp_name'], $target_dir . $filename)) {
-                $query = "INSERT INTO images(_file, _type, _size, user_id)
-                VALUES('$filename','$filetype','$filesize','$user_id');";
+                $query = "INSERT INTO images(_file, _type, _size, user_id, _desc)
+                VALUES('$filename','$filetype','$filesize','$user_id', '$file_desc');";
                 pg_query($query);
                 echo '<script type="text/JavaScript"> 
-                alert("Image uploaded sucessfully!");
+                alert("Image has been uploaded successfully uploaded sucessfully!");
                 window.location.href = "../user_profile.php"
                 </script>';
             } else {

@@ -14,6 +14,7 @@ session_start();
 $file_names = $_POST['filename'];
 $remove_spaces = str_replace(" ","", $file_names);
 $allFileNames = explode(",", $remove_spaces);
+print_r($allFileNames);
 $countAllNames = count($allFileNames);
 $user_id = $_SESSION['id'];
 $target_dir = "../img_". $user_id . "/";
