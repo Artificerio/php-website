@@ -1,5 +1,5 @@
 <?php
-#TODO: 1. create sign_up page
+#TODO  #1. create sign_up page [x]
       #2. create database_scheme 
       #3. implement scheme in website
 
@@ -35,18 +35,20 @@ $check = pg_query("SELECT EXISTS(SELECT 1 FROM images WHERE user_id='$user_id')"
 </form>
 </div>
 
+
+<!--output-css -->
 <style type="text/css" media="screen">
 .grid-container{
     display: grid;
-    grid-template-columns: repeat(2, 400px);
-    grid-template-rows: 400px, 400px;
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
+    grid-template-columns: repeat(2, 500px);
+    grid-template-rows: 500px, 400px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
 }
 .grid-item2 {
-    padding: 100px;
     color: royalblue;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 500px;
 }
 
 </style>
@@ -63,7 +65,7 @@ if ($check) {
 
         echo '<div class="grid-item grid-item2">';
                 echo "filename : " . $row['_file'];  echo '<br/>';
-        echo 'image description : ' .$row['_desc'];  echo '<br/>';
+                echo 'image description : ' .$row['_desc'];  echo '<br/>';
                 echo 'filesize :'. $row['_size'];  echo '<br/>';
                 echo 'type : '. $row['_type']; echo '<br/>';
         echo '</div>';

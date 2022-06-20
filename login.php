@@ -15,9 +15,9 @@ session_start();
    <div class="login_div">
    <h2>Please Login</h2> 
     <form action="" method="POST">
-        <input type="email" name=email placeholder="Enter email" class="field"> <br/>
-        <input type="password" name=password placeholder="Enter password " class="field"> <br/>
-        <input type="submit" value="Submit" name="submit_btn" class="field">
+        <label for="email">Email: </label><input type="email" name=email placeholder="Enter email" class="field"> <br/>
+        <label for="password">Password: </label><input type="password" name=password placeholder="Enter password " class="field"> <br/>
+        <input type="submit" value="Log in" name="submit_btn" class="field">
     </form>
    </div>
 <?php
@@ -44,5 +44,8 @@ session_start();
         header("Location: user_profile.php");
     }
 ?>
+<div class="user_register">
+   Not registered? Create an account  <a href="sign_up.php" ><b>here!</b></a>
+</div>
 </body>
 </html>
