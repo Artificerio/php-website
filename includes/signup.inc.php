@@ -24,6 +24,6 @@
             alert("Successfully created account!");
             window.location.href = "../login.php"
             </script>';
-        }
+        } 
     }
 ?>

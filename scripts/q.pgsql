@@ -1,7 +1,0 @@
--- CREATE TABLE images (
---     _id BIGSERIAL PRIMARY KEY,
---     _file varchar(255) NOT NULL, 
---     _type varchar(255) NOT NULL,
---     _size varchar(255) NOT NULL,
---     user_id BIGSERIAL REFERENCES custom (id)
--- );

@@ -1,5 +1,5 @@
 <?php
-#TODO  #1. create sign_up page [x]
+#TODO #1. create sign_up page [x]
       #2. create database_scheme 
       #3. implement scheme in website
 
